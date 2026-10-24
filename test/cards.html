@@ -1,0 +1,9 @@
+<!doctype html><meta charset="utf-8"><body style="background:#1f5c3a;margin:10px">
+<div id="d" style="display:grid;grid-template-columns:repeat(8,110px);gap:8px"></div>
+<script type="module">
+import { defsSVG, cardSVG, backSVG } from '../js/cards-svg.js';
+document.body.insertAdjacentHTML('afterbegin', defsSVG());
+let h=''; for (let c=0;c<32;c++) h += `<div style="width:110px">${cardSVG(c)}</div>`; h+= `<div style="width:110px">${backSVG()}</div>`;
+document.getElementById('d').innerHTML = h;
+document.querySelectorAll('svg.card').forEach(s=>s.style.width='110px');
+</script>
